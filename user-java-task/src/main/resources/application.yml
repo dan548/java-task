@@ -1,0 +1,23 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/userdb
+    username: admin
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: User Management Service
+
+jwt:
+  issuer: d.poliakov@yahoo.com
+  signingKey: signingTaskKey
+  aTokenDuration: 30
+  cookieName: sibraine
